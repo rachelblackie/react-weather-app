@@ -1,7 +1,9 @@
 .Weather {
   font-family: Poppins;
   color: #212529;
-  padding: 16px;
-  margin: 30px auto;
+  margin: 15px auto;
   max-width: 600px;
+}
+.type-city-field {
+  max-width: 125px;
 }
