@@ -5,6 +5,7 @@ import axios from "axios";
 
 import WeatherInfo from "./WeatherInfo";
 import WeatherIcon from "./WeatherIcon";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -39,7 +40,7 @@ export default function Weather(props) {
   if (ready) {
     return (
       <div className="Weather">
-        <div className="container mx-5 border border-info border-3 rounded">
+        <div className="container mx-5 border border-info border-3 shadow px-4 py-3 rounded">
           <div></div>
           <div className="row">
             <div className="col-6">
@@ -60,8 +61,9 @@ export default function Weather(props) {
               <WeatherInfo data={weatherData} />
             </div>
             <div className="col-6 my-auto py-3">
-              <WeatherIcon code={weatherData.icon} />
+              <WeatherIcon code={weatherData.icon} size={225} />
             </div>
+            <Forecast city={weatherData.city} />
           </div>
         </div>
       </div>
