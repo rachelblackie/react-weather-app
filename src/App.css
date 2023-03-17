@@ -3,3 +3,9 @@ footer {
   margin: 0 auto;
   text-align: center;
 }
+footer a {
+  color: #31d2f2;
+}
+footer a:hover {
+  color: hsl(189, 69%, 20%);
+}
